@@ -1,0 +1,119 @@
+main {
+  padding: 30px 40px;
+}
+
+/***********************************************************/
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #434d65;
+  border-radius: 9px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.brand-logo {
+  height: 8vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .brand-logo {
+    animation: brand-logo-spin infinite 6s linear;
+  }
+}
+
+@keyframes brand-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.brand-name {
+  color: rgb(182, 115, 184);
+}
+
+/***********************************************************/
+.nav-bar {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-button {
+  padding: 10px;
+}
+
+/***********************************************************/
+.ressons-ul {
+  list-style: none;
+  font-size: calc(10px + 2vmin);
+}
+
+/***********************************************************/
+.card--slide {
+  padding: 50px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+}
+
+.card--image {
+  border-radius: 10px;
+  width: 500px;
+  height: auto;
+  object-fit: cover;
+}
+
+/***********************************************************/
+.katieMeme {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.katieMeme--button {
+  width: 500px;
+  height: 50px;
+  border-radius: 9px;
+  border-style: solid;
+  background-color: transparent;
+  color: white;
+}
+
+/***********************************************************/
+.form {
+  padding: 50px;
+  gap: 30px;
+  display: grid;
+  grid-template: 40px 40px / 1fr 1fr;
+}
+
+.form--input {
+  border-radius: 9px;
+  text-indent: 5px;
+  border-style: none;
+}
+
+.form--button {
+  grid-column: 1 / -1;
+  border-radius: 9px;
+  border-style: none;
+}
