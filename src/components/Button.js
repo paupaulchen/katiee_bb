@@ -3,9 +3,6 @@ import React, { useState } from "react";
 export default function Button({ handleClick, className, label }) {
   const [isOnButton, setIsOnButton] = useState(false);
 
-  const mouseEnter = () => setIsOnButton(true);
-  const mouseLeave = () => setIsOnButton(false);
-
   const hoverStyle = isOnButton
     ? {
         borderStyle: "solid",
@@ -17,8 +14,8 @@ export default function Button({ handleClick, className, label }) {
   return (
     <button
       onClick={handleClick}
-      onMouseEnter={mouseEnter}
-      onMouseLeave={mouseLeave}
+      onMouseEnter={() => setIsOnButton(true)}
+      onMouseLeave={() => setIsOnButton(false)}
       className={className}
       style={hoverStyle}
     >
